@@ -68,9 +68,14 @@ function displayStats() {
 }
 
 function displayCatchphrases() {
-    // clear out the DOM for the currently displayed catchphrases
-    // loop through each catchphrase in state
-    // and for each catchphrase
-    // create an HTML element with the catchphrase as its text content
-    // and append that HTML element to the cleared-out DOM
+    catchphrasesEl.textContent = '';
+
+    for (let catchphrase of catchphrases) {
+        const p = document.createElement('p');
+
+        p.classList.add('catchphrase');
+        p.textContent = catchphrase;
+
+        catchphrasesEl.append(p);
+    }
 }
