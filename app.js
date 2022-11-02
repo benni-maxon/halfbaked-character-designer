@@ -24,7 +24,7 @@ headDropdown.addEventListener('change', () => {
     // increment the head change count state
     headCount++;
     // update the dom for the head (use style.backgroundImage on the headEl div instead of trying to set the .src -- it's NOT an img tag!)
-    headEl.style.backgroundImage = `url("./assets${value}-head.png")`;
+    headEl.style.backgroundImage = `url("./assets/${value}-head.png")`;
     // update the stats to show the new count (call displayStats() to do this work)
     displayStats();
 });
@@ -33,7 +33,7 @@ middleDropdown.addEventListener('change', () => {
     const value = middleDropdown.value;
 
     middleCount++;
-    middleEl.style.backgroundImage = `url("./assets${value}-middle.png")`;
+    middleEl.style.backgroundImage = `url("./assets/${value}-middle.png")`;
     displayStats();
 });
 
@@ -41,7 +41,7 @@ bottomDropdown.addEventListener('change', () => {
     const value = bottomDropdown.value;
 
     bottomCount++;
-    bottomEl.style.backgroundImage = `url("./assets${value}-bottom.png")`;
+    bottomEl.style.backgroundImage = `url("./assets/${value}-pants.png")`;
     displayStats();
 });
 
