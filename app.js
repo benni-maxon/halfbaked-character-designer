@@ -41,7 +41,7 @@ bottomDropdown.addEventListener('change', () => {
     const value = bottomDropdown.value;
 
     bottomCount++;
-    bottomEl.style.backgroundImage = `url("./assets/${value}-pants.png")`;
+    bottomEl.style.backgroundImage = `url("./assets/${value}-bottom.png")`;
     displayStats();
 });
 
