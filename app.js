@@ -57,7 +57,7 @@ catchphraseButton.addEventListener('click', () => {
 });
 
 function createStatsString(headNum, middleNum, bottomNum) {
-    return `You have changed the head ${headNum} times, the body ${middleNum} times, and the pants ${bottomNum} times. Nobody can forget your character's catchphrases:`;
+    return `You have changed heads ${headNum} times, bodies ${middleNum} times, and pants ${bottomNum} times. Nobody better forget your character's legendary catchphrases:`;
 }
 
 function displayStats() {
