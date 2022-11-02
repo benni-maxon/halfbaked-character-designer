@@ -38,17 +38,22 @@ middleDropdown.addEventListener('change', () => {
 });
 
 bottomDropdown.addEventListener('change', () => {
-    // get the value of the bottom dropdown
-    // increment the bottom change count state
-    // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-    // update the stats to show the new count (call displayStats() to do this work)
+    const value = bottomDropdown.value;
+
+    bottomCount++;
+    bottomEl.style.backgroundImage = `url("./assets${value}-bottom.png")`;
+    displayStats();
 });
 
 catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
+    const newCatchphrase = catchphraseInput.value;
     // push the new catchphrase to the catchphrase array in state
+    catchphrases.push(newCatchphrase);
     // clear out the form input's value so it's empty to the user
+    catchphraseInput.value = '';
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
+    displayCatchphrases();
 });
 
 function displayStats() {
